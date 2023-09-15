@@ -1,0 +1,24 @@
+﻿@page
+@model Zadanie4.Pages.Admin.Blogs.AddModel
+@{
+}
+<form method="post">
+    <div class="col-4">
+        <label>write your message!</label>
+    </div>
+    <div class="col-1">
+        <textarea asp-for="AddMessageRequest.Text"></textarea>
+    </div>
+    <div class="col-5">
+        <label>Who do you want to write to?</label> 
+    </div>
+    <div class="col-1">
+        <input type="text" asp-for="AddMessageRequest.Recipient"/>
+    </div>
+    <div class="col-1">
+        <input type="submit" class="btn" placeholder="submit" />
+    </div>
+    
+    
+    
+</form>

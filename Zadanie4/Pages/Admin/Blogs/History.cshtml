@@ -1,0 +1,29 @@
+﻿@page
+@model Zadanie4.Pages.Admin.Blogs.HistoryModel
+@{
+}
+<h1>List of Post</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Author</td>
+                <td>Post</td>
+                <td>Recipient</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var post in Model.BlogPosts)
+            {
+                @if (post.Author == this.User.Identity.Name)
+                {
+                    <tr>
+                        <td>@post.Author</td>
+                        <td>@post.Text</td>
+                        <td>@post.Recipient</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
